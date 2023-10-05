@@ -7,7 +7,6 @@ html,
 body {
   scroll-behavior: 5s; /* slow, smooth, initial, etc. */
 }
-
 @font-face {
   font-family: "poppinsbold";
   src: url("font/poppins-bold-webfont.woff2") format("woff2"),
@@ -155,6 +154,10 @@ h1 {
   min-height: 572.9px;
   max-height: 750px;
   z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 .observer {
   visibility: hidden;
@@ -193,7 +196,8 @@ h1 {
   padding: 50px;
 }
 
-nav {
+nav,
+.anim1 {
   display: flex;
   justify-content: center;
   position: fixed;
@@ -203,25 +207,19 @@ nav {
   z-index: 200;
   width: 100%;
 }
-nav > li {
+nav,
+.anim1 > li {
   width: 150px;
   list-style-type: none;
   margin: 0px 30px;
-  border: white solid 3px;
+  /* border: white solid 3px; */
   padding: 15px;
   text-align: center;
 }
-nav > li > a {
+.anim1 > li > a {
   color: white;
   text-decoration: none;
 }
-.toshow {
-  animation: toshow 2s forwards;
-}
-.tobright {
-  animation: brightness 2s forwards;
-}
-
 .social-wrapper {
   position: fixed;
   right: 25px;
@@ -248,6 +246,25 @@ nav > li > a {
 .social-wrapper i {
   font-size: 24px;
 }
+.title {
+  opacity: 0;
+  font-size: clamp(24px, 2.5, 3vh);
+  transform: translate(-50%, -250px);
+  z-index: 200;
+  position: fixed;
+  top: 250px;
+  left: 50%;
+}
+
+.toshow {
+  animation: toshow 2s forwards;
+}
+.tobright {
+  animation: brightness 2s forwards;
+}
+.tofade {
+  animation: fadeIn 3s forwards;
+}
 @keyframes toshow {
   from {
     opacity: 0;
@@ -263,4 +280,53 @@ nav > li > a {
   to {
     filter: brightness(0.5);
   }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -250px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+
+/*animation 2*******************************************************************************************************/
+.anim2 {
+  opacity: 1;
+  position: relative;
+  opacity: 1;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  gap: 50px;
+}
+.anim2 > li > a {
+  text-decoration: none;
+  color: white;
+}
+.title-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0px;
+}
+.animation2-wrapper {
+  height: 6000px;
+}
+.image-wrapper {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  gap: 50px;
+  justify-content: center;
+  width: 100%;
+}
+
+.image-wrapper > figure > img {
+  width: 200px;
+  height: 350px;
+  border-radius: 25px;
 }

@@ -2,8 +2,9 @@ const gallery = document.querySelector(".gallery");
 const central = document.querySelector(".central");
 const un = document.querySelector(".un");
 const deux = document.querySelector(".deux");
-const nav = document.querySelector("nav");
+const nav1 = document.querySelector(".anim1");
 const social = document.querySelector(".social-wrapper");
+const title = document.querySelector(".title");
 console.log(social);
 
 //faire defiler le pseudo element lors du scroll
@@ -15,12 +16,17 @@ document.addEventListener("scroll", () => {
   // console.log(scrollHeight);
   before.style.setProperty("--height-before", `${scrollHeight / 2}px`);
   before.style.setProperty("--height-after", `${scrollHeight}px`);
+  if (scrollHeight > 5000) {
+    title.classList.add("tofade");
+  } else {
+    title.classList.remove("tofade");
+  }
   if (scrollHeight > 6000) {
-    nav.classList.add("toshow");
+    nav1.classList.add("toshow");
     central.classList.add("tobright");
     social.classList.add("toshow");
   } else {
-    nav.classList.remove("toshow");
+    nav1.classList.remove("toshow");
     central.classList.remove("tobright");
     social.classList.remove("toshow");
   }
