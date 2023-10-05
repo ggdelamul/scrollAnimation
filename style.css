@@ -313,7 +313,7 @@ nav,
   margin: 50px 0px;
 }
 .animation2-wrapper {
-  height: 6000px;
+  height: 1500px;
 }
 .image-wrapper {
   display: flex;
@@ -329,4 +329,23 @@ nav,
   width: 200px;
   height: 350px;
   border-radius: 25px;
+  position: relative;
+}
+.item_1 {
+  z-index: 100;
+}
+.item_2 {
+  z-index: 90;
+}
+.item_3 {
+  z-index: 80;
+}
+.item_4 {
+  z-index: 70;
+}
+.item_5 {
+  z-index: 60;
+}
+.item_6 {
+  z-index: 50;
 }
