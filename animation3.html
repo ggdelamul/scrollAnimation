@@ -8,16 +8,31 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style2.css" />
   </head>
   <body>
-    <nav class="nav anim2">
+    <nav class="nav anim2 fixed">
       <li><a href="index.html">animation1</a></li>
       <li><a href="animation2.html">animation2</a></li>
-      <li><a href="animation3.html">Lien 2</a></li>
+      <li><a href="animation3.html">animation3</a></li>
       <li><a href="">Lien 3</a></li>
     </nav>
-    <main>animation3</main>
+    <main>
+      <header class="bgImg first" id="first">
+        <h1>parallax css only animation3</h1>
+      </header>
+      <aside>
+        <a href="#first"><div class="circle un"></div></a>
+        <a href="#second"><div class="circle deux"></div></a>
+        <a href="#third"><div class="circle trois"></div></a>
+      </aside>
+      <div class="bgImg second" id="second">
+        <h2>STREET2</h2>
+      </div>
+      <div class="bgImg third" id="third">
+        <h2>STREET3</h2>
+      </div>
+    </main>
     <script src="app3.js"></script>
   </body>
 </html>

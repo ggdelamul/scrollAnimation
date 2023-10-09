@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/************************nav***************************/
+nav,
+.anim1 {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  padding: 15px;
+  opacity: 0;
+  z-index: 200;
+  width: 100%;
+  background-color: black;
+}
+nav,
+.anim1 > li {
+  width: 150px;
+  list-style-type: none;
+  margin: 0px 30px;
+  /* border: white solid 3px; */
+  padding: 15px;
+  text-align: center;
+}
+.anim2 {
+  opacity: 1;
+  position: relative;
+  opacity: 1;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  gap: 50px;
+}
+.anim2 > li > a {
+  text-decoration: none;
+  color: white;
+}
+/**********************************/
+body {
+  height: 300vh;
+}
+.fixed {
+  position: fixed;
+  top: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+.bgImg {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  color: white;
+}
+.first {
+  background-image: url("img/zongnan-bao-4WEys0FPbqc-unsplash.jpg");
+}
+.second {
+  background-image: url("img/edan-cohen-gjmbiBK9kI4-unsplash.jpg");
+}
+.third {
+  background-image: url("img/andrea-cau-nV7GJmSq3zc-unsplash.jpg");
+}
+
+aside {
+  width: 25px;
+  height: 200px;
+  position: fixed;
+  right: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: solid 2px white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.circle {
+  width: 10px;
+  height: 10px;
+  border: solid 1px white;
+  border-radius: 50%;
+}
